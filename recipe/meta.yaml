@@ -1,6 +1,6 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "9d60fefbb8f8aec467aac0057df3eea91f553bcb5a601ed649a9f6d1628b017a" %}
+{% set version = "0.6.2" %}
+{% set sha256 = "24c0c2bae9accd6059566ef80cf822cf059743130861d4d651a0c529957f27e6" %}
 
 package:
   name: {{ name|lower }}
