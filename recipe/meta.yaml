@@ -12,6 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -26,8 +27,6 @@ requirements:
     - matplotlib >=1.5,<3
     - six 1.*
     - wxpython <4.1
-    - gtk2  # [linux]
-
 
 test:
   source_files:
@@ -38,7 +37,7 @@ test:
     - pytest 3.*
     - pytest-cov 2.*
   commands:
-    - xvfb-run pytest -v --cov=fsleyes_widgets  # [linux]
+    - xvfb-run pytest -v --cov=fsleyes_widgets
   imports:
     - fsleyes_widgets.autotextctrl
     - fsleyes_widgets.bitmapradio
