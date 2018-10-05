@@ -27,6 +27,7 @@ requirements:
     - matplotlib >=1.5,<3
     - six 1.*
     - wxpython <4.1
+    - gtk2
 
 test:
   source_files:
