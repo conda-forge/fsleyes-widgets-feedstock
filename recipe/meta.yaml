@@ -37,7 +37,7 @@ test:
     - pytest 3.*
     - pytest-cov 2.*
   commands:
-    - DISPLAY=":0" xvfb-run -s "screen 0 640x480x24" pytest -v --cov=fsleyes_widgets
+    - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_widgets
   imports:
     - fsleyes_widgets.autotextctrl
     - fsleyes_widgets.bitmapradio
