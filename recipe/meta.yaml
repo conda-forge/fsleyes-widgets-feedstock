@@ -1,6 +1,6 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.6.3" %}
-{% set sha256 = "fe1151927446474b305a4a29d648b0db45f5054a351581273fbe5918e3b76cf6" %}
+{% set version = "0.6.6" %}
+{% set sha256 = "0053bbec84cae120ad7158c1464be6e6d989898f4901d728809fd99ab3c60bb7" %}
 
 package:
   name: {{ name|lower }}
@@ -20,13 +20,6 @@ requirements:
   build:
     - python
     - pip
-    - sphinx 1.6.*
-    - sphinx_rtd_theme 0.*
-    - mock 2.*
-    - coverage 4.*
-    - pytest 3.*
-    - pytest-cov 2.*
-    - pytest-runner >=2.*,<=4.*
   run:
     - python
     - deprecation >=1.*,<=2.*
@@ -35,11 +28,43 @@ requirements:
     - six 1.*
     - wxpython <4.1
 
-
 test:
+  source_files:
+    - tests
+  requires:
+    - mock 2.*
+    - coverage 4.*
+    - pytest 3.*
+    - pytest-cov 2.*
   commands:
-    - python -c "import fsleyes_widgets"
-
+    - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_widgets
+  imports:
+    - fsleyes_widgets.autotextctrl
+    - fsleyes_widgets.bitmapradio
+    - fsleyes_widgets.bitmaptoggle
+    - fsleyes_widgets.colourbutton
+    - fsleyes_widgets.dialog
+    - fsleyes_widgets.elistbox
+    - fsleyes_widgets.floatslider
+    - fsleyes_widgets.floatspin
+    - fsleyes_widgets.imagepanel
+    - fsleyes_widgets.notebook
+    - fsleyes_widgets.numberdialog
+    - fsleyes_widgets.placeholder_textctrl
+    - fsleyes_widgets.rangeslider
+    - fsleyes_widgets.textpanel
+    - fsleyes_widgets.texttag
+    - fsleyes_widgets.togglepanel
+    - fsleyes_widgets.widgetgrid
+    - fsleyes_widgets.widgetlist
+    - fsleyes_widgets.utils.colourbarbitmap
+    - fsleyes_widgets.utils.layout
+    - fsleyes_widgets.utils.progress
+    - fsleyes_widgets.utils.runwindow
+    - fsleyes_widgets.utils.status
+    - fsleyes_widgets.utils.textbitmap
+    - fsleyes_widgets.utils.typedict
+    - fsleyes_widgets.utils.webpage
 
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/widgets/
