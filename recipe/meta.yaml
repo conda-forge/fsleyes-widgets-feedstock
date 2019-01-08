@@ -22,11 +22,10 @@ requirements:
     - pip
   run:
     - python
-    - deprecation >=1.*,<=2.*
     - numpy 1.*
-    - matplotlib >=1.5,<3
+    - matplotlib >=1.5
     - six 1.*
-    - wxpython <4.1
+    - wxpython >=3.0.2.0
 
 test:
   source_files:
@@ -38,33 +37,6 @@ test:
     - pytest-cov 2.*
   commands:
     - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_widgets
-  imports:
-    - fsleyes_widgets.autotextctrl
-    - fsleyes_widgets.bitmapradio
-    - fsleyes_widgets.bitmaptoggle
-    - fsleyes_widgets.colourbutton
-    - fsleyes_widgets.dialog
-    - fsleyes_widgets.elistbox
-    - fsleyes_widgets.floatslider
-    - fsleyes_widgets.floatspin
-    - fsleyes_widgets.imagepanel
-    - fsleyes_widgets.notebook
-    - fsleyes_widgets.numberdialog
-    - fsleyes_widgets.placeholder_textctrl
-    - fsleyes_widgets.rangeslider
-    - fsleyes_widgets.textpanel
-    - fsleyes_widgets.texttag
-    - fsleyes_widgets.togglepanel
-    - fsleyes_widgets.widgetgrid
-    - fsleyes_widgets.widgetlist
-    - fsleyes_widgets.utils.colourbarbitmap
-    - fsleyes_widgets.utils.layout
-    - fsleyes_widgets.utils.progress
-    - fsleyes_widgets.utils.runwindow
-    - fsleyes_widgets.utils.status
-    - fsleyes_widgets.utils.textbitmap
-    - fsleyes_widgets.utils.typedict
-    - fsleyes_widgets.utils.webpage
 
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/widgets/
