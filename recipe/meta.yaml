@@ -36,7 +36,7 @@ test:
     - pytest 3.*
     - pytest-cov 2.*
   commands:
-    - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_widgets
+    - xvfb-run -s "-screen 0 1200x800x24" pytest -v --cov=fsleyes_widgets
 
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/widgets/
