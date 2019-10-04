@@ -1,6 +1,6 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.8.2" %}
-{% set sha256 = "3f2324cd940329393ffb19d52e2af98d30b8e042130de738215ae1f96812a746" %}
+{% set version = "0.8.3" %}
+{% set sha256 = "a98b119bb26fcf3ea9d5446bba908d7e925522dc874855d67815d0b80c1df02b" %}
 
 package:
   name: {{ name|lower }}
@@ -22,19 +22,19 @@ requirements:
     - pip
   run:
     - python >=3
-    - numpy 1.*
+    - numpy
     - matplotlib >=1.5
-    - six 1.*
+    - six
     - wxpython >=3.0.2.0
 
 test:
   source_files:
     - tests
   requires:
-    - mock 2.*
-    - coverage 4.*
-    - pytest 3.*
-    - pytest-cov 2.*
+    - mock
+    - coverage
+    - pytest
+    - pytest-cov
   commands:
     - xvfb-run -s "-screen 0 1200x800x24" pytest -v --cov=fsleyes_widgets
 
