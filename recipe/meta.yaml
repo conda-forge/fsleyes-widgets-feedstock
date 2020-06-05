@@ -32,6 +32,7 @@ test:
     - tests
   requires:
     - coverage
+    - mock
     - pytest
     - pytest-cov
   commands:
