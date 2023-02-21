@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3
     - numpy
-    - matplotlib-base >=1.5
+    - matplotlib-base >=3.5
     - wxpython >=3.0.2.0
 
 test:
