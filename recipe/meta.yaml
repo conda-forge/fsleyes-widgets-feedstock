@@ -1,6 +1,6 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.13.0" %}
-{% set sha256 = "6248b76bdd114fd92d116ef9b251bdc94294bed5e8db060fdfc428c131ac1031" %}
+{% set version = "0.14.0" %}
+{% set sha256 = "c305aac27d135b333233dd958b75e91625f236a748515f9cc84cdb60292f4dae" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
