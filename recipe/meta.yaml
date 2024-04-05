@@ -1,6 +1,6 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.14.3" %}
-{% set sha256 = "fa5def0946219fb3818a148b70623d5fc8d863cde1cc5e9fbcc58042c6ef8892" %}
+{% set version = "0.14.4" %}
+{% set sha256 = "4fc2326e70c0e2885131377f088d78157b9a550a92ef146c15a6ced911e22b56" %}
 
 package:
   name: {{ name|lower }}
@@ -28,14 +28,14 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - pyproject.toml
+    - fsleyes_widgets/tests
   requires:
     - coverage
-    - mock
     - pytest
     - pytest-cov
   commands:
-    - xvfb-run -s "-screen 0 1200x800x24" pytest -v --cov=fsleyes_widgets -m "not dodgy"
+    - xvfb-run -s "-screen 0 1200x800x24" pytest -v -m "not dodgy" fsleyes_widgets/tests/
 
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/widgets/
