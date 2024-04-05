@@ -28,14 +28,14 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - pyproject.toml
+    - fsleyes_widgets/tests
   requires:
     - coverage
-    - mock
     - pytest
     - pytest-cov
   commands:
-    - xvfb-run -s "-screen 0 1200x800x24" pytest -v --cov=fsleyes_widgets -m "not dodgy"
+    - xvfb-run -s "-screen 0 1200x800x24" pytest -v -m "not dodgy" fsleyes_widgets/tests/
 
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/widgets/
