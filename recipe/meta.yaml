@@ -1,14 +1,16 @@
 {% set name = "fsleyes-widgets" %}
-{% set version = "0.14.4" %}
-{% set sha256 = "4fc2326e70c0e2885131377f088d78157b9a550a92ef146c15a6ced911e22b56" %}
+{% set pypi_name = "fsleyes_widgets" %}
+{% set version = "0.14.5" %}
+{% set sha256 = "63717bfb9efea7c45596c36b8d366d18d89cd11b452161d2f8c655cc169ba4d0" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ pypi_name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
