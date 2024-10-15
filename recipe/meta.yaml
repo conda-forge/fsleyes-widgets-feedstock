@@ -1,7 +1,7 @@
 {% set name = "fsleyes-widgets" %}
 {% set pypi_name = "fsleyes_widgets" %}
-{% set version = "0.14.6" %}
-{% set sha256 = "6aedb917360101b11b63c13afe57051e6ea5eaf110af934a16302dcef3dabaa5" %}
+{% set version = "0.14.7" %}
+{% set sha256 = "5b17d9bfd3578fcfcb014e082da34082ec145fd4736a92b202e265f63deb48a1" %}
 
 
 package:
@@ -22,6 +22,7 @@ requirements:
   host:
     - python >=3
     - pip
+    - setuptools
   run:
     - python >=3
     - numpy
