@@ -1,7 +1,7 @@
 {% set name = "fsleyes-widgets" %}
 {% set pypi_name = "fsleyes_widgets" %}
-{% set version = "0.14.7" %}
-{% set sha256 = "5b17d9bfd3578fcfcb014e082da34082ec145fd4736a92b202e265f63deb48a1" %}
+{% set version = "0.14.8" %}
+{% set sha256 = "5e0fa264b1ec43799646b5c1a5e1340d123cfa4d2e416d8f78a208299ae50ab1" %}
 
 
 package:
