@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=3
     - numpy
     - matplotlib-base >=3.5
     - wxpython >=3.0.2.0
@@ -34,7 +34,6 @@ test:
     - pyproject.toml
     - fsleyes_widgets/tests
   requires:
-    - python {{ python_min }}
     - coverage
     - pytest
     - pytest-cov
