@@ -10,7 +10,7 @@ package:
 
 source:
   fn: {{ pypi_name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base >=3.5
     - wxpython >=3.0.2.0
@@ -34,6 +34,7 @@ test:
     - pyproject.toml
     - fsleyes_widgets/tests
   requires:
+    - python {{ python_min }}
     - coverage
     - pytest
     - pytest-cov
