@@ -15,16 +15,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base >=3.5
     - wxpython >=3.0.2.0
@@ -37,6 +37,7 @@ test:
     - coverage
     - pytest
     - pytest-cov
+    - python {{ python_min }}
   commands:
     - xvfb-run -s "-screen 0 1200x800x24" pytest -v -m "not dodgy" fsleyes_widgets/tests/
 
