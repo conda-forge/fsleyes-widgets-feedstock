@@ -1,7 +1,7 @@
 {% set name = "fsleyes-widgets" %}
 {% set pypi_name = "fsleyes_widgets" %}
-{% set version = "0.14.8" %}
-{% set sha256 = "5e0fa264b1ec43799646b5c1a5e1340d123cfa4d2e416d8f78a208299ae50ab1" %}
+{% set version = "0.15.0" %}
+{% set sha256 = "8402ff351fd3028ef3f30705d38bf6c3b8f06313ead8f0899f8edac7f6029191" %}
 
 
 package:
@@ -15,7 +15,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
