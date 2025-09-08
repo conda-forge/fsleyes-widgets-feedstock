@@ -1,7 +1,7 @@
 {% set name = "fsleyes-widgets" %}
 {% set pypi_name = "fsleyes_widgets" %}
-{% set version = "0.15.0" %}
-{% set sha256 = "8402ff351fd3028ef3f30705d38bf6c3b8f06313ead8f0899f8edac7f6029191" %}
+{% set version = "0.15.1" %}
+{% set sha256 = "bc52f4e46f56e2e6ba98b0beaea62bd8f38ce7a88c28aecbcc3b5f05a4078c9c" %}
 
 
 package:
@@ -23,6 +23,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - numpy
